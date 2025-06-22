@@ -39,3 +39,16 @@ Authentication: git push via HTTPS no longer uses your GitHub password. You must
 Email Privacy: GitHub protects your email address. Your local git config user.email must match an email known to GitHub or use the special ...@users.noreply.github.com address to successfully push changes.
 The Command Feedback Loop: The git status command is your most important tool. It tells you the current state of your repository, what has changed, and what needs to be done next. You successfully used it to guide your actions throughout the lesson.
 
+Jr.: Once you have the project on your computer, the raw, stripped-down, 3-part process to get any change from your MacBook to GitHub is:
+
+git add <filename>
+(Stage the changes you want to save).
+
+git commit -m "Your descriptive message"
+(Save a snapshot of those staged changes to your computer).
+
+git push
+(Upload that saved snapshot to GitHub).
+
+That is the fundamental rhythm of working with Git. Everything else we learn—branching, merging, pull requests—is built on top of that core add -> commit -> push cycle.
+
