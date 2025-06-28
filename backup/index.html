@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrinBound - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="donate.html">Donate for Materials</a>
+    <a href="donate-legal.html">Donate for Legal</a>
+    <a href="https://forms.gle/MCtq2mHAsDHHRfdg8" target="_blank">Photo Release Form</a>
+  </nav>
+
+  <div class="hero" id="hero-carousel">
+    <img src="assets/images/logo.png" alt="GrinBound Logo" class="hero-logo">
+    <div id="countdown"></div>
+  </div>
+
+  <div class="container">
+    <main>
+      <h1>Welcome to Inclusivity Caps!</h1>
+      <p>This is the homepage for the GrinBound project. Our mission is to foster connection and friendship for children with special needs through the joy of collaborative art.</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 GrinBound. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // --- Countdown Clock Logic ---
+    const countDownDate = new Date("Sep 2, 2025 08:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdownElement.innerHTML = "WELCOME BACK TO SCHOOL!";
+      }
+    }, 1000);
+
+    // --- Hero Carousel Logic ---
+    const heroElement = document.getElementById('hero-carousel');
+    const images = [
+      'assets/images/hero-image-1.png',
+      'assets/images/hero-image-2.png',
+      'assets/images/hero-image-3.png'
+    ];
+    let currentImage = 0;
+
+    function changeBackgroundImage() {
+      heroElement.style.backgroundImage = 'url(' + images[currentImage] + ')';
+      currentImage = (currentImage + 1) % images.length;
+    }
+
+    setInterval(changeBackgroundImage, 5000); // Change image every 5 seconds
+    changeBackgroundImage(); // Initial call
+  </script>
+
+</body>
+</html>
