@@ -240,6 +240,62 @@ footer {
   border-radius: 8px;
 }
 
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+  width: 60%;
+  max-width: 400px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .donation-tiers {
+    flex-direction: column;
+  }
+
+  .tier-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
 /* --- Modern Buttons & Links --- */
 .button, input[type="submit"] {
   display: inline-block;
