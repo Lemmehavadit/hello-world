@@ -1,1 +1,2 @@
 .DS_Store
+\n# Ignore backup directories\nbackup/
