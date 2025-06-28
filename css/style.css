@@ -232,6 +232,14 @@ footer {
   margin-top: 30px;
 }
 
+.shipping-option {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
 /* --- Modern Buttons & Links --- */
 .button, input[type="submit"] {
   display: inline-block;
