@@ -1,2 +1,4 @@
 .DS_Store
 \n# Ignore backup directories\nbackup/
+\n# Environment variables\n.env
+\n# Node.js dependencies\nnode_modules/
