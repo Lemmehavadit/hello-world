@@ -10,10 +10,10 @@
 <body>
 
   <nav class="navbar">
-    <a href="./index.html">Home</a>
-    <a href="./about.html">About Us</a>
-    <a href="./donate.html">Donate for Materials</a>
-    <a href="./donate-legal.html">Donate for Legal</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
     <a href="subscribe.html">Subscribe</a>
   </nav>
 
@@ -33,12 +33,18 @@
         <strong>Please note:</strong> As we are not yet a 501(c)(3), your contribution on this page is a direct gift to the cause and is not tax-deductible at this time.
       </p>
 
-      <form>
-        <h3>Donate Any Amount</h3>
-        <label for="donation-amount">Enter Amount:</label>
-        <input type="text" id="donation-amount" name="donation-amount" placeholder="$50.00">
-        <input type="submit" value="Contribute to Legal Fund">
-      </form>
+      <div class="custom-donation">
+        <form id="custom-donation-form">
+          <h3>Donate Any Amount</h3>
+          <label for="custom-amount">Enter Amount:</label>
+          <input type="text" id="custom-amount" name="custom-amount" placeholder="$25.00">
+          <div class="recurring-option">
+            <input type="checkbox" id="recurring" name="recurring">
+            <label for="recurring">Make this a monthly contribution</label>
+          </div>
+          <input type="submit" value="Contribute to Legal Fund">
+        </form>
+      </div>
     </main>
 
     <footer>
@@ -51,5 +57,7 @@
     </footer>
   </div>
 
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="client.js"></script>
 </body>
 </html>
